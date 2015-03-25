@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
 	root to: "lists#index"
- resources :lists
+ resources :lists do
+ 	resources :tasks
+ end
 end
+
+
+#nested routes
