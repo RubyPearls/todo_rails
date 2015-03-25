@@ -1,8 +1,17 @@
 <h1>Lists</h1>
 
+
+  <% if @lists.any? %>
+
 <ul>
 	<% @lists.each do |list| %>
 		<li><%= link_to list.name, list_path(list) %></li>
 	<% end %>	
 
 </ul>
+
+<% else %>
+
+<p> There are not lists yet! </p>
+
+<% end %>
